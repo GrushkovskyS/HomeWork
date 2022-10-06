@@ -1,5 +1,5 @@
 package lesson2;
-
+// Домашка
 public class HomeWorkApp2 {
 
     public static void main(String[] args){
