@@ -1,0 +1,21 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+!/src/main/java/lesson1/
+!/src/main/java/lesson2/
+!/src/main/java/lesson3/Main.java
+!/src/main/java/lesson3/TestArrays.java
+!/src/main/java/lesson3/TestsMethods.java!/src/main/java/lesson1/HomeWorkApp.java
+!/src/main/java/lesson1/MainForLessonOne.java
+!/src/main/java/lesson2/ForTest.java
+!/src/main/java/lesson2/HomeWorkApp2.java
+!/src/main/java/lesson2/Incrementing.java
+!/src/main/java/lesson2/SwitchTest.java
+!/src/main/java/lesson2/TestMethods.java
+!/src/main/java/lesson2/WhileTest.java
+
