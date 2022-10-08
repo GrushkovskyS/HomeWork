@@ -69,7 +69,7 @@ public class HomeWorkApp3 {
         }
         System.out.println();
     }
-//Задание5
+//Задание5.
     private static int[] getLen (int len, int initialValue) {
         int[] data = new int [len];
         Arrays.fill(data, initialValue);
