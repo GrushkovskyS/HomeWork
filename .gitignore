@@ -5,3 +5,7 @@
 /src/main/java/lesson4/
 /src/main/java/lesson4/
 /src/main/java/lesson5/
+
+
+!/src/main/java/lesson5/Player.java
+!/src/main/java/lesson5/Main.java
