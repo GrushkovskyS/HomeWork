@@ -1,6 +1,6 @@
 package lesson5;
 
-public class HomeWork5_1 {
+public class  HomeWork5_1 {
     public static void main(String[] args) {
 
         Worker worker1 = new Worker("Вася", "Директор", "dir@mail.ru", 413060,3000,40);

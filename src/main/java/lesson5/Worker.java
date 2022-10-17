@@ -18,6 +18,6 @@ public class Worker {
         this.age = age;
     }
     public void printInfo(){
-        System.out.println(String.format("ФИО: %s Профессия: %s email: %s Телефон: %s Зарплата: %s Воздаст: %s ", name, profession, email, tel, many, age));
+        System.out.println(String.format(" ФИО: %s Профессия: %s email: %s Телефон: %s Зарплата: %s Воздаст: %s ", name, profession, email, tel, many, age));
     }
 }
