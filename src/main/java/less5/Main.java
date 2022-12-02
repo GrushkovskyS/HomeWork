@@ -13,5 +13,4 @@ public class Main {
 
         appData.save("test1.txt");
     }
-
 }
