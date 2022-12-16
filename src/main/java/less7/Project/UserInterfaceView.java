@@ -13,7 +13,10 @@ public class UserInterfaceView {
             System.out.println("Введите название города: ");
             String city = scanner.nextLine();
 
-            System.out.println("Введите 1 - для получения прогноза на один день; " + "Введите 5 - для получения прогноза на пять дней; " + "Введите 0 - для выхода");
+            System.out.println("Введите 1 - для получения прогноза на один день; " +
+                    "Введите 5 - для получения прогноза на пять дней; " +
+                    "Введите 2 - для получения прогноза из DB; " +
+                    "Введите 0 - для выхода");
 
             String command = scanner.nextLine();
 
@@ -33,6 +36,18 @@ public class UserInterfaceView {
                 }runInterface();
 
             if("5".equals(command)){
+                try {
+                    controller.getWeather(command, city);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                break;
+            }
+            else {
+                System.out.printf(" Ошибка!!!%n Введите 1 - для получения прогноза на один день%n Введите 5 - для получения прогноза на пять дней%n Введите 0 - для выхода%n");
+            }runInterface();
+
+            if("2".equals(command)){
                 try {
                     controller.getWeather(command, city);
                 } catch (IOException e) {

@@ -7,6 +7,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.List;
 
 public class AccuweatherModel implements WeatherModel{
 
@@ -17,7 +18,7 @@ public class AccuweatherModel implements WeatherModel{
     private static final String DAILY = "daily";
     private static final String ONE_DAY ="1day";
     private static final String FIVE_DAYS = "5day";
-    private static final String API_KEY = "hAfhU7N5O5QeFa9SDysQSuXTlpjR2R0w";
+    private static final String API_KEY = "MgywqraNghnsQMvrv9ogidLQRIo3iS0P";
     private static final String API_KRY_QUERY_PARAM = "apikey";
     private static final String LOCATIONS = "locations";
     private static final String CITIES = "cities";
@@ -25,6 +26,8 @@ public class AccuweatherModel implements WeatherModel{
 
     private static final OkHttpClient okHttpClient = new OkHttpClient();
     private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    private DataBaseRepository dataBaseRepository = new DataBaseRepository();
 
     @Override
     public void getWeather(String selectedCity, Period period) throws IOException {
@@ -48,6 +51,8 @@ public class AccuweatherModel implements WeatherModel{
                 Response oneDayEorecastResponse = okHttpClient.newCall(request).execute();
                 String weatherResponse = oneDayEorecastResponse.body().string();
                 System.out.println(weatherResponse);
+
+                dataBaseRepository.getSavedToDBWeather();
 
                 break;
 
@@ -102,6 +107,12 @@ public class AccuweatherModel implements WeatherModel{
        // System.out.println(cityKey);
 
         return cityKey;
+    }
+
+    @Override
+    public List<Weather> getSavedToDBWeather() {
+        return dataBaseRepository.getSavedToDBWeather();
+
     }
 
     public static void main(String[] args) throws IOException {

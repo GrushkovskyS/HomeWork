@@ -7,7 +7,7 @@ public class Weather {
     private String weatherText;
     private double temperature;
 
-    public Weather(String city, String localDate, String weatherText, double temperature) {
+    public Weather(String city, String localDate, double temperature) {
         this.city = city;
         this.localDate = localDate;
         this.weatherText = weatherText;
