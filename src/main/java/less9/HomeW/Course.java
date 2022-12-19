@@ -34,4 +34,5 @@ public class Course {
         Course course = (Course) o;
         return Objects.equals(name,course.name);
     }
+
 }
